@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-box {
+  background-color: red;
+  color: white;
+  padding: 10px 50px;
+  border-bottom-left-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.step-number {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  width: 100%;
+  margin-left: 4em;
+  /* text-align: center; */
+}
+
+.step-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 10px;
+}
+
+.step-with-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.visited-step {
+  background-color: red;
+}
+
+.active-step {
+  background-color: gray;
+}
+
+.inactive-step {
+  background-color: lightgray;
+}
+
+.label-text {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.connector {
+  height: 2px;
+  width: 200px; /* Double the width of the connector */
+}
+
+.visited-step.connector {
+  background-color: red;
+}
+
+.inactive-step.connector {
+  background-color: lightgray;
+}
