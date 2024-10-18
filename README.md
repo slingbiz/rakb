@@ -60,3 +60,76 @@ rakb/
 │   ├── step3/     # Microfrontend for Step 3
 ├── server/        # Node.js backend
 └── screenshots/   # Screenshots of the working app
+```
+
+## Mock API
+
+The backend for this application is a Node.js server that serves as a mock API. It handles requests from the frontend apps (Step 1, Step 2, Step 3) and provides a mock response for each step submission.
+
+### API Endpoints
+- **POST /api/saveData**
+    - This endpoint simulates saving form data at each step.
+    - Expects JSON input for form data (varies based on the step).
+    - Returns a mock success response with a generated `id`.
+
+    **Request Example:**
+    ```bash
+    POST http://localhost:9000/api/saveData
+    Content-Type: application/json
+    ```
+
+    **Request Body Example (Step 1):**
+    ```json
+    {
+      "userId": "12345",
+      "step": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com"
+    }
+    ```
+
+    **Response Example:**
+    ```json
+    {
+      "id": "unique-backend-id",
+      "message": "Data saved successfully for Step 1"
+    }
+    ```
+
+    **Request Body Example (Step 2):**
+    ```json
+    {
+      "userId": "12345",
+      "step": 2,
+      "address": "123 Main Street"
+    }
+    ```
+
+    **Response Example (Error):**
+    ```json
+    {
+      "error": "Invalid data or server error"
+    }
+    ```
+
+### How to Start the Mock API Server
+1. Navigate to the `server/` directory.
+    ```bash
+    cd server
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Start the server:
+    ```bash
+    npm run dev
+    ```
+
+    The server will start running on `http://localhost:9000` by default.
+
+### Important Notes
+- The API is a **mock** and does not persist any data. Each request will generate a mock response.
+- Each form submission from Step 1, Step 2, or Step 3 should include the `userId` and `step` information to ensure that the correct flow is maintained across the steps.
