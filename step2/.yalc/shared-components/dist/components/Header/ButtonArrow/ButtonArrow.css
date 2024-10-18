@@ -1,0 +1,45 @@
+/* shared/components/ButtonArrow.css */
+.next-button {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #b90000;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    transition: background-color 0.3s ease;
+  }
+  
+  .next-button:hover {
+    background-color: #a50000;
+  }
+  
+  .next-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
+  .next-button::after {
+    content: "";
+    position: absolute;
+    right: -10px; /* Adjust this for arrow size */
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #b90000;
+  }
+  
+  .next-button:hover::after {
+    border-left-color: #a50000;
+  }
+  
+  .next-button:disabled::after {
+    border-left-color: #999;
+  }
+  

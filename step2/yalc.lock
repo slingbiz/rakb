@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "shared-components": {
+      "signature": "a4c31bf7e80d65fa488004493611a759",
+      "file": true
+    }
+  }
+}
